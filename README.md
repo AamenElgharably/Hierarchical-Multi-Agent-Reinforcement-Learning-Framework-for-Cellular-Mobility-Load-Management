@@ -1,17 +1,7 @@
-# Self-Optimized-Agent-for-Load-Balancing-and-Energy-Efficiency
- We consider the problem of optimization of mobile networks. We aim to enhance the
-network throughput, minimize energy consumption, and improve network coverage. The problem is cast
-as a reinforcement learning (RL) problem. The reward function accounts for the joint optimization of
-throughput, energy consumption, and coverage; our formulation allows the network operator to assign
-weights to each of these cost functions based on the operator’s preferences. Moreover, the state is defined
-by key performance indicators (KPIs) that are readily available on the network operator side. Finally, the
-action space for the RL agent comprises a hybrid action space, where we have two continuous action
-elements, namely, cell individual offsets (CIOs) and transmission powers, and one discrete action element,
-which is switching MIMO ON and OFF. To that end, we propose a new layered RL agent structure to
-account for the agent hybrid space. We test our proposed RL agent over two scenarios: a simple (proof
-of concept) scenario and a realistic network scenario. Our results show significant performance gains of
-our proposed RL agent compared to some baseline approaches, e.g., a system where no optimization is
-carried out or RL agents that optimize only one or two parameters.
+# Hierarchical-Multi-Agent-Reinforcement-Learning-Framework-for-Cellular-Mobility-Load-Management
+
+The increasing complexity and density of modern networks necessitate advanced, AI-driven solutions to manage traffic efficiently and maintain high-quality service. In this paper, we present a novel reinforcement learning (RL) framework designed to optimize handover parameters for load balancing in cellular networks. Our framework adopts a \emph{hierarchical multi-agent} RL approach. Closely adjacent cells (a.k.a., cluster) are controlled by \emph{cluster-level} agents, whereas inter-cluster parameters are controlled by a \emph{network-level} agent. By intricate design of state spaces and agent communication, both cluster-level and network-level agents work collaboratively to enhance network performance in terms of throughput and coverage. This method reduces the action and state spaces for each agent, facilitating faster learning, scalable network-wide control, and more efficient decision-making. Our simulation results demonstrate significant improvements in downlink throughput with respect to fully decentralized agents. Our approach incurs negligible throughput loss when compared to a fully centralized agent with full knowledge of the entire network. Our approach not only achieves scalable load balancing with minimal overhead but also allows for customizable reward functions tailored to different network needs.****
+
 # Installation
 ## Installing Prerequisites
 
