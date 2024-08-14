@@ -27,13 +27,13 @@ The increasing complexity and density of modern networks necessitate advanced, A
 
 Note: that ns-3 installtion directory is called Path_to_NS3_Directory.
 
-1- Copy New_agent,TD3 folders to Path_to_NS3_Directory/scratch/. Try not to use nested folders i.e. avoid: scratch/folder1/folder2/file.cc, instead use scratch/folder1/file.cc. 
+1- Copy Fully_Decentralized,RealScee,SB_TD3_double folders to Path_to_NS3_Directory/scratch/. Try not to use nested folders i.e. avoid: scratch/folder1/folder2/file.cc, instead use scratch/folder1/file.cc. 
 
 2- Replace the diectory Path_to_NS3_Directory/scr/lte with the directory inside the archived file in lte(1).zip (Rememebr to backup the original)
 
 3- Copy cell-individual-offset.h and cell-individual-offset.cc to Path_to_NS3_Directoy/src/lte/model/.
 
-4- Copy LTE_Attributes.txt, Real_model-attributes.txt, script_LTE_POCS.sh, script_LTE_RealSce.sh and Power_CIO.sh to Path_to_NS3_Directoy/.
+4- Copy LTE_Attributes.txt, Real_model-attributes.txt, RealSce_1.sh, sb_td3_double.sh and Fully_Decentralized.sh to Path_to_NS3_Directoy/.
 
 5- Copy and replace lte-ue-rrc.cc with Path_to_NS3_Directoy/src/lte/model/lte-ue-rrc.cc (Rememebr to backup the original).
 
@@ -50,25 +50,33 @@ $ ./waf
 ```
 Notice that: If the ./waf command resulted in an error, remove the directory Path_to_NS3_Directory/contrib/opengym from this path
   
-10- You can configure your own attributes from the (LTE_Attributes.txt, Real_model-attributes.txt)
+10- You can configure your own attributes from the Real_model-attributes.txt
 
 11- Place the mobility model files in Path_to_NS3_Directory/scratch.
 
-12- To run the Proof of concept scenario. In the directory Path_to_NS3_Directoy:
+12- To run the Fully_Decentralized_Scenario. In the directory Path_to_NS3_Directoy:
 
 - right-click to open the terminal and run the command:
      
 ```
-$ ./New_agent.sh
+$ ./Fully_Decentralized.sh
 ```
 For the first run, you may need to run
 ```
-$ chmod +x ./New_agent.sh
+$ chmod +x ./Fully_Decentralized.sh
 ```
 
 -To run one episode only run the following command instead:
 
 ```
-$ ./waf --run "scratch/New_agent/New_agent --RunNum=$(($i))"
+$ ./waf --run "scratch//Fully_Decentralized.sh/Fully_Decentralized.sh --RunNum=$(($i))"
 ```
--Same applies for the TD3 agent by changing New_agent to TD3 when using aformentioned commands
+-Same applies for other agents agent by changing Fully Decentralized to (sb_td3_double or RealSce_1) when using aformentioned commands
+
+-After Running the simulator run agent/s in thier respective folders using following command:
+	python3 "agent python file"
+ 
+Fully_Decentralized : agent1-6.py
+sb_td3_double : agent1-3.py
+RealSce_1 : Agent_TD3.py
+
