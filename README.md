@@ -74,8 +74,9 @@ $ ./waf --run "scratch//Fully_Decentralized.sh/Fully_Decentralized.sh --RunNum=$
 -Same applies for other agents agent by changing Fully Decentralized to (sb_td3_double or RealSce_1) when using aformentioned commands
 
 -After Running the simulator run agent/s in thier respective folders using following command:
+```
 	python3 "agent python file"
- 
+```
 Fully_Decentralized : agent1-6.py
 sb_td3_double : agent1-3.py
 RealSce_1 : Agent_TD3.py
